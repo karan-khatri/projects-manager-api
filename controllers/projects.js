@@ -27,7 +27,7 @@ const getAllProjects = async (req, res) => {
 const createProject = async (req, res) => {
   const createdBy = req.user.userId;
 
-  const project = await Project.create({ ...req.body, createdBy }, { runValidators: true });
+  const project = await Project.create({ ...req.body, createdBy });
   res.status(StatusCodes.OK).json(project);
 
   if (!project) {

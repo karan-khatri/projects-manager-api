@@ -20,7 +20,6 @@ const errorHandlerMiddleware = (err, req, res, next) => {
         })
         .join(' and ') +
       ' to continue!';
-    console.log(errorMessage);
     customError.msg = errorMessage;
     customError.statusCode = StatusCodes.BAD_REQUEST;
   }
