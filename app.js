@@ -11,7 +11,6 @@ import rateLimiter from 'express-rate-limit';
 //express
 import 'express-async-errors';
 import express from 'express';
-app.set('trust proxy', 1);
 const app = express();
 
 //connectDB
