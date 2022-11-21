@@ -16,7 +16,6 @@ const authToken = async (req, res, next) => {
     req.user = { userId, name };
     next();
   } catch (error) {
-    console.log('hutte');
     throw new UnauthenticatedError('Authentication failed!');
   }
 };
